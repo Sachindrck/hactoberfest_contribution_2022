@@ -1,0 +1,11 @@
+Python Program to Check Armstrong Number
+
+Algorithm to check Program is Armstrong Number or Not ?
+
+1. Count how many digits there are in the number.
+2. Using mod and division operations, each digit is accessed one after the other.
+3. Each digit is multiplied by the number of digits, and the result is saved in a separate variable.
+4. Steps 2 and 3 are repeated until all of the digits have been used.
+5. Analyze the result obtained using the original number.
+a. If both are same/equal then it is armstrong number
+b. Else it is not armstrong number.

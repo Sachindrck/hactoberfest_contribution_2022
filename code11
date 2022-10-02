@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+ 
+class GFG
+{
+     
+
+static int longLenSub(int []arr, int n)
+{
+    
+    Dictionary<int,
+               int> um = new Dictionary<int,
+                                        int>();
+     
+    // to store the longest length subsequence
+    int longLen = 0;
+     
+    // traverse the array elements
+    for (int i = 0; i < n; i++)
+    {
+        // initialize current length
+        // for element arr[i] as 0
+        int len = 0;
+         
+       
+        if (um.ContainsKey(arr[i] - 1) &&
+            len < um[arr[i] - 1])
+            len = um[arr[i] - 1];
+         
+         
+        if (um.ContainsKey(arr[i] + 1) &&
+            len < um[arr[i] + 1])
+            len = um[arr[i] + 1];
+         
+        // update arr[i] subsequence length in 'um'
+        um[arr[i]] = len + 1;
+         
+        // update longest length
+        if (longLen < um[arr[i]])
+            longLen = um[arr[i]];
+    }
+         
+    // required longest length subsequence
+    return longLen;    
+}
+     
+// Driver program to test above
+static void Main()
+{
+    int[] arr = {1, 2, 3, 4, 5, 3, 2};
+    int n = arr.Length;
+    Console.Write("Longest length subsequence = " +
+                               longLenSub(arr, n));
+}
+}
+ 

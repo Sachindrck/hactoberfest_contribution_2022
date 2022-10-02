@@ -28,7 +28,7 @@ Check out `good-first-issues` for contributing [here](https://github.com/sj50270
  
 
 ### Author
-
+* Sachin Kumar [https://github.com/Sachindrck]
 
 ### Rules
 
@@ -60,4 +60,4 @@ If you like this project, please consider supporting it by giving it a ⭐️. I
 **✨ Thanks goes to these wonderful people ✨**
 
  
- 
+

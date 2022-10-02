@@ -30,15 +30,8 @@ Check out `good-first-issues` for contributing [here](https://github.com/sj50270
 ### Author
 
 
-
- 
-### Contributing
-
-Please read [CONTRIBUTING.md](/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](/CODE_OF_CONDUCT.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ### Rules
 
-* Read the [CONTRIBUTING.md](/CONTRIBUTING.md) file.
 * Respect people.
 * Be friendly, helpful, and patient.
 * You can contribute in any way.

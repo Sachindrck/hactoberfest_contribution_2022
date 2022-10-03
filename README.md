@@ -67,12 +67,12 @@ If you like this project, please consider supporting it by giving it a ⭐️. I
 
 2. Clone the forked repository.
 ```css
-git clone https://github.com/<your-github-username>/Hactoberfest-2022-Beginners
+git clone https://github.com/Sachindrck/hactoberfest_contribution_2022.git
 ```
   
 3. Navigate to the project directory.
 ```py
-cd Hactoberfest-2022-Beginners
+cd hactoberfest_contribution_2022
 ```
 
 4. Create a new branch.

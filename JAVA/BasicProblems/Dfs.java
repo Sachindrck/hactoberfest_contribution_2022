@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 
-class dfs
+class Dfs
 {
 	static void search(int[][] arr,int n,int[] visited,int r)               // r is the node being explored.
 	{
@@ -21,9 +21,7 @@ class dfs
 
 	public static void main(String[] args)
 	{
-		Scanner x=new Scanner(System.in);System.out.println("P. Sriram Bhardwaj");
-		System.out.println("Regd.no - 122010308005");
-		System.out.println(" ");
+		Scanner x=new Scanner(System.in);
 		System.out.println("Breadth First search");
 		System.out.println(" ");
 		System.out.println("enter the number of elements");

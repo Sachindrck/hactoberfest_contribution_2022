@@ -59,5 +59,42 @@ If you like this project, please consider supporting it by giving it a ⭐️. I
 
 **✨ Thanks goes to these wonderful people ✨**
 
- 
+# Steps For Contribution
+
+0. Star <a href="https://github.com/bhavberi/Hactoberfest-2022-Beginners" title="this">this</a> repository.
+
+1. Fork <a href="https://github.com/bhavberi/Hactoberfest-2022-Beginners/fork" title="this">this</a> repository.
+
+2. Clone the forked repository.
+```css
+git clone https://github.com/<your-github-username>/Hactoberfest-2022-Beginners
+```
+  
+3. Navigate to the project directory.
+```py
+cd Hactoberfest-2022-Beginners
+```
+
+4. Create a new branch.
+```css
+git checkout -b <your_branch_name>
+```
+
+5. Make changes.
+
+6. Stage your changes and commit
+```css
+git add -A
+
+git commit -m "<your_commit_message>"
+```
+
+7. Push your local commits to the remote repo.
+```css
+git push -u origin <your_branch_name>
+```
+
+8. Create a Pull Request.
+
+9. Congratulations! 🎉 you've made your contribution, and it would be accepted very soon.
 

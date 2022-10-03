@@ -1,116 +1,90 @@
-# Tic-Tac-Toe Program using
-# random number in Python
-
-# importing all necessary libraries
-import numpy as np
-import random
-from time import sleep
-
-# Creates an empty board
-def create_board():
-	return(np.array([[0, 0, 0],
-					[0, 0, 0],
-					[0, 0, 0]]))
-
-# Check for empty places on board
-def possibilities(board):
-	l = []
-	
-	for i in range(len(board)):
-		for j in range(len(board)):
-			
-			if board[i][j] == 0:
-				l.append((i, j))
-	return(l)
-
-# Select a random place for the player
-def random_place(board, player):
-	selection = possibilities(board)
-	current_loc = random.choice(selection)
-	board[current_loc] = player
-	return(board)
-
-# Checks whether the player has three
-# of their marks in a horizontal row
-def row_win(board, player):
-	for x in range(len(board)):
-		win = True
-		
-		for y in range(len(board)):
-			if board[x, y] != player:
-				win = False
-				continue
-				
-		if win == True:
-			return(win)
-	return(win)
-
-# Checks whether the player has three
-# of their marks in a vertical row
-def col_win(board, player):
-	for x in range(len(board)):
-		win = True
-		
-		for y in range(len(board)):
-			if board[y][x] != player:
-				win = False
-				continue
-				
-		if win == True:
-			return(win)
-	return(win)
-
-# Checks whether the player has three
-# of their marks in a diagonal row
-def diag_win(board, player):
-	win = True
-	y = 0
-	for x in range(len(board)):
-		if board[x, x] != player:
-			win = False
-	if win:
-		return win
-	win = True
-	if win:
-		for x in range(len(board)):
-			y = len(board) - 1 - x
-			if board[x, y] != player:
-				win = False
-	return win
-
-# Evaluates whether there is
-# a winner or a tie
-def evaluate(board):
-	winner = 0
-	
-	for player in [1, 2]:
-		if (row_win(board, player) or
-			col_win(board,player) or
-			diag_win(board,player)):
-				
-			winner = player
-			
-	if np.all(board != 0) and winner == 0:
-		winner = -1
-	return winner
-
-# Main function to start the game
-def play_game():
-	board, winner, counter = create_board(), 0, 1
-	print(board)
-	sleep(2)
-	
-	while winner == 0:
-		for player in [1, 2]:
-			board = random_place(board, player)
-			print("Board after " + str(counter) + " move")
-			print(board)
-			sleep(2)
-			counter += 1
-			winner = evaluate(board)
-			if winner != 0:
-				break
-	return(winner)
-
-# Driver Code
-print("Winner is: " + str(play_game()))
+import os    
+import time    
+    
+board = [' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']    
+player = 1    
+   
+########win Flags##########    
+Win = 1    
+Draw = -1    
+Running = 0    
+Stop = 1    
+###########################    
+Game = Running    
+Mark = 'X'    
+   
+#This Function Draws Game Board    
+def DrawBoard():    
+    print(" %c | %c | %c " % (board[1],board[2],board[3]))    
+    print("___|___|___")    
+    print(" %c | %c | %c " % (board[4],board[5],board[6]))    
+    print("___|___|___")    
+    print(" %c | %c | %c " % (board[7],board[8],board[9]))    
+    print("   |   |   ")    
+   
+#This Function Checks position is empty or not    
+def CheckPosition(x):    
+    if(board[x] == ' '):    
+        return True    
+    else:    
+        return False    
+   
+#This Function Checks player has won or not    
+def CheckWin():    
+    global Game    
+    #Horizontal winning condition    
+    if(board[1] == board[2] and board[2] == board[3] and board[1] != ' '):    
+        Game = Win    
+    elif(board[4] == board[5] and board[5] == board[6] and board[4] != ' '):    
+        Game = Win    
+    elif(board[7] == board[8] and board[8] == board[9] and board[7] != ' '):    
+        Game = Win    
+    #Vertical Winning Condition    
+    elif(board[1] == board[4] and board[4] == board[7] and board[1] != ' '):    
+        Game = Win    
+    elif(board[2] == board[5] and board[5] == board[8] and board[2] != ' '):    
+        Game = Win    
+    elif(board[3] == board[6] and board[6] == board[9] and board[3] != ' '):    
+        Game=Win    
+    #Diagonal Winning Condition    
+    elif(board[1] == board[5] and board[5] == board[9] and board[5] != ' '):    
+        Game = Win    
+    elif(board[3] == board[5] and board[5] == board[7] and board[5] != ' '):    
+        Game=Win    
+    #Match Tie or Draw Condition    
+    elif(board[1]!=' ' and board[2]!=' ' and board[3]!=' ' and board[4]!=' ' and board[5]!=' ' and board[6]!=' ' and board[7]!=' ' and board[8]!=' ' and board[9]!=' '):    
+        Game=Draw    
+    else:            
+        Game=Running    
+    
+print("Tic-Tac-Toe Game Designed By Sourabh Somani")    
+print("Player 1 [X] --- Player 2 [O]\n")    
+print()    
+print()    
+print("Please Wait...")    
+time.sleep(3)    
+while(Game == Running):    
+    os.system('cls')    
+    DrawBoard()    
+    if(player % 2 != 0):    
+        print("Player 1's chance")    
+        Mark = 'X'    
+    else:    
+        print("Player 2's chance")    
+        Mark = 'O'    
+    choice = int(input("Enter the position between [1-9] where you want to mark : "))    
+    if(CheckPosition(choice)):    
+        board[choice] = Mark    
+        player+=1    
+        CheckWin()    
+    
+os.system('cls')    
+DrawBoard()    
+if(Game==Draw):    
+    print("Game Draw")    
+elif(Game==Win):    
+    player-=1    
+    if(player%2!=0):    
+        print("Player 1 Won")    
+    else:    
+        print("Player 2 Won")    

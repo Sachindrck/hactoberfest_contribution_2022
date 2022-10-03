@@ -28,11 +28,9 @@ public class Main {
                 if(pq.size()<k){
                     pq.add(sub);
                 }
-                else{
-                    if(pq.peek()<sub){
-                        pq.poll();
-                        pq.add(sub);
-                    }
+                else if(pq.peek()<sub){
+                    pq.poll();
+                    pq.add(sub);
                 }
             }
         }

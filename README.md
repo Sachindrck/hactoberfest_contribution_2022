@@ -61,9 +61,9 @@ If you like this project, please consider supporting it by giving it a ⭐️. I
 
 # Steps For Contribution
 
-0. Star <a href="https://github.com/bhavberi/Hactoberfest-2022-Beginners" title="this">this</a> repository.
+0. Star <a href="https://github.com/Sachindrck/hactoberfest_contribution_2022" title="this">this</a> repository.
 
-1. Fork <a href="https://github.com/bhavberi/Hactoberfest-2022-Beginners/fork" title="this">this</a> repository.
+1. Fork <a href="https://github.com/Sachindrck/hactoberfest_contribution_2022" title="this">this</a> repository.
 
 2. Clone the forked repository.
 ```css

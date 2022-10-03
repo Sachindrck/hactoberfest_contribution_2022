@@ -8,7 +8,7 @@ Create four pull request and win hacktoberfest swags!
 
  
 
-[![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/sj5027052/Hacktoberfest2022)
+[![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/Sachindrck/hactoberfest_contribution_2022)
 
  
 

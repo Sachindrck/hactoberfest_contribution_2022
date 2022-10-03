@@ -8,7 +8,7 @@ Create four pull request and win hacktoberfest swags!
 
  
 
-[![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/sj5027052/Hacktoberfest2022)
+[![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/Sachindrck/hactoberfest_contribution_2022)
 
  
 
@@ -59,5 +59,42 @@ If you like this project, please consider supporting it by giving it a ⭐️. I
 
 **✨ Thanks goes to these wonderful people ✨**
 
- 
+# Steps For Contribution
+
+0. Star <a href="https://github.com/Sachindrck/hactoberfest_contribution_2022" title="this">this</a> repository.
+
+1. Fork <a href="https://github.com/Sachindrck/hactoberfest_contribution_2022" title="this">this</a> repository.
+
+2. Clone the forked repository.
+```css
+git clone https://github.com/Sachindrck/hactoberfest_contribution_2022.git
+```
+  
+3. Navigate to the project directory.
+```py
+cd hactoberfest_contribution_2022
+```
+
+4. Create a new branch.
+```css
+git checkout -b <your_branch_name>
+```
+
+5. Make changes.
+
+6. Stage your changes and commit
+```css
+git add -A
+
+git commit -m "<your_commit_message>"
+```
+
+7. Push your local commits to the remote repo.
+```css
+git push -u origin <your_branch_name>
+```
+
+8. Create a Pull Request.
+
+9. Congratulations! 🎉 you've made your contribution, and it would be accepted very soon.
 

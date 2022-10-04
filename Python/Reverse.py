@@ -1,10 +1,5 @@
-number = int(input("Enter the integer number: "))  
-  
-revs_number = 0  
-  
-while (number > 0):  
-    remainder = number % 10  
-    revs_number = (revs_number * 10) + remainder  
-    number = number // 10  
-    
-print("The reverse number is : {}".format(revs_number))  
+num = input('Enter any number : ')try:
+    val = int(num)
+    print('Reverse of the given number is : ', str(num)[::-1])
+except ValueError:
+    print("That's not a valid number!")

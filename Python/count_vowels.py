@@ -1,8 +1,9 @@
-vowel='aeiou'
-my_str=input('enter a string= ')
-new_str=my_str.casefold()
-count={}.fromkeys(vowel,0)
-for char in new_str:
-    if char in count:
-        count[char]+=1
-print(count)        
+from collections import Counter
+
+def count_vowels(phrase):
+    """ accepts a string and counts the number of each vowels.
+    returns a dictionary key --> values 
+            of each vowel and their number of occurrences.
+    """
+    vowels = "aeiou"
+    return Counter(c for c in phrase.lower() if c in vowels)

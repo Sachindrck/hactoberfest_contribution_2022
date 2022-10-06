@@ -8,4 +8,5 @@ def hcf(num1,num2):
             hcf = i
     return hcf
 
+
 print("HCF = ",hcf(12,14))          

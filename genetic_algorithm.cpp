@@ -1,4 +1,7 @@
 // Genetic Algorithm in C++
+// Genetic Algorithm (GA) is a search-based optimization technique based on the principles of Genetics and Natural Selection. 
+// It is frequently used to find optimal or near-optimal solutions to difficult problems which otherwise would take a lifetime to solve. 
+//It is frequently used to solve optimization problems, in research, and in machine learning.
 
 
 #include <cmath>
@@ -102,7 +105,7 @@ int ackley(prnt a){
     }
 }
 
-
+// fitness value shows the ability of an individual to “compete”
 int fitness(prnt a,int ft){
     if(ft==1){
         return rastrigin(a);
@@ -147,7 +150,7 @@ int main(){
 
 
     prnt best_prnt(0,0 );
-    int best_prntl_fitness = 0;
+    int best_prntl_fitness = 0;        // initially fitness of each individual is zero
     int avg_prntl_fitness = 0;
     int pop_size=4;
     int bit_size =8;
@@ -185,7 +188,7 @@ int main(){
         
 
 
-        vector<vector<prnt>> tournament;
+        vector<vector<prnt>> tournament;    // tournament is done among population and random best ssoltions equal to no of populatio are taken in account for next step
 
         for (int i = 0; i < pop_size; i++)
         {
@@ -195,7 +198,7 @@ int main(){
             tournament.push_back(a);
         }
         
-        vector<prnt> mating_pool;
+        vector<prnt> mating_pool;       // After the tournament winners go through mating togenerate offsprings
 
         for (int i = 0; i < tournament.size(); i++)
         {
@@ -206,7 +209,7 @@ int main(){
             }
         }
 
-        vector<prnt> offspring;   
+        vector<prnt> offspring;                       // offsprings generated after mating, for all these we have to convert popution into binary
         prnt p1 = mating_pool[rand()%4];
         prnt p2 = mating_pool[rand()%4]; 
         prnt p3 = mating_pool[rand()%4]; 
@@ -234,7 +237,7 @@ int main(){
         if(offspring2[mutation_point2]=='0')offspring2[mutation_point2]='1';
         else offspring2[mutation_point2]='0';
 
-        
+        // after mutation again the binary solutions are converted to decimal and are passed further as solution
         prnt o1(binaryToDecimal(offspring1.substr(0,8)),binaryToDecimal(offspring1.substr(8,8)));
         prnt o2(binaryToDecimal(offspring2.substr(0,8)),binaryToDecimal(offspring2.substr(8,8)));
 

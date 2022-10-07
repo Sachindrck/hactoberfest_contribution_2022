@@ -42,7 +42,7 @@ body {
   justify-content: space-around;
 }
 
-.search input::placeholder{
+.search input::placeholder, .search input{
   font-family: 'Montserrat';
 }
 

@@ -54,7 +54,9 @@ int binaryToDecimal(string n)
     return dec_value;
 }
 
+// rastrigin,sphere, rosenbrock ans ackley are mathematical functions used for performance test for optimaisation algorithms
 
+// Rastrigin  is a non- convex, non-linear multimodal function used as a performance test problem for optimization algorithms.. 
 int rastrigin(prnt a){
 
     int fitness =0;
@@ -74,6 +76,8 @@ int rastrigin(prnt a){
     }
 
 }
+
+// Sphere function is a standard function for evaluating the performance of an optimization algorithm with lower bound ( minx) = -10.0
 int sphere(prnt a){
     int fitness = fitness = pow(a.getx(), 2) + pow(a.gety(), 2);
     if(limit[0][0]<= a.getx()<=limit[0][1] && limit[1][0]<= a.gety() <= limit[1][1]){
@@ -85,6 +89,7 @@ int sphere(prnt a){
 
 }
 
+//Rosenbrock function is a non- convex function, which is used as a performance test problem for optimization algorithms.
 int rosenbrock(prnt a){
     int fitness = 100 * pow(a.gety() - pow(a.getx(), 2), 2) + pow(1 - a.getx(), 2);
        if(limit[0][0]<= a.getx()<=limit[0][1] && limit[1][0]<= a.gety() <= limit[1][1]){
@@ -95,6 +100,7 @@ int rosenbrock(prnt a){
     }
 }
 
+// Ackley function is a non-convex function used as a performance test problem for optimization algorithms.
 int ackley(prnt a){
     int fitness = -20 * exp(-0.2 * sqrt(0.5 * (pow(a.getx(), 2) + pow(a.gety(), 2)))) - exp(0.5 * (cos(2 * M_PI * a.getx()) + cos(2 * M_PI * a.gety()))) + exp(1) + 20;
      if(limit[0][0]<= a.getx()<=limit[0][1] && limit[1][0]<= a.gety() <= limit[1][1]){
